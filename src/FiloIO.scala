@@ -83,7 +83,7 @@ object FiloIO {
       val pw = new PrintWriter(new File("filtered_purchases.prn"))
       purchaseList.foreach(x =>
         if (x.category == "Jewelry") {
-          val s = s"Customer: ${x._1}, Date: ${x.date.substring(0,10)} "
+          val s = s"Customer: ${x.customerId}, Date: ${x.date.substring(0,10)} "
           println(s)
           pw.write(s + "\n")
         })
